@@ -1,6 +1,6 @@
 const express = require('express')
 
-const PORT = process.env.PORT || 3050;
+const config=require('./config')
 
 const app = express();
 
@@ -16,4 +16,5 @@ app.use(express.json());
 app.use('/api/auth', auth)
 
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.listen(config.api.port, () => console.log(`Server running on port ${config.api.port}`));

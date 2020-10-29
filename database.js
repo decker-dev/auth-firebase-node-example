@@ -1,18 +1,24 @@
-const mysql = require('mysql')
+const mysql = require('mysql');
+
+const config = require('./config');
+
+const dbconf = {
+    host: config.mysql.host,
+    user: config.mysql.user,
+    password: config.mysql.password,
+    database: config.mysql.database,
+    port: config.mysql.port,
+};
+
 let connection;
+
 function handleCon() {
-    connection = mysql.createConnection({
-        host: 'host',
-        user: 'user',
-        password: 'password',
-        database: 'database',
-        port:'port'
-    });
+    connection = mysql.createConnection(dbconf);
 
     connection.connect((err) => {
         if (err) {
             console.error('[db err]', err);
-            setTimeout(handleCon, 60000);
+            setTimeout(handleCon, 2000);
         } else {
             console.log('DB Connected!');
         }
@@ -27,5 +33,6 @@ function handleCon() {
         }
     })
 }
-handleCon()
+
+handleCon();
 module.exports =connection

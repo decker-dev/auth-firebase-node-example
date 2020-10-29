@@ -1,7 +1,7 @@
 const firebase = require("firebase/app");
 require("firebase/auth");
-
-const apiKey = '';
+const config=require('./config')
+const apiKey = config.firebase.token;
 const fb = firebase.initializeApp({
   apiKey: apiKey,
 });
