@@ -1,1 +1,0 @@
-# auth-firebase-node-mysql
