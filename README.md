@@ -42,4 +42,4 @@ POST /signin
 ![](https://github.com/decker-dev/auth-firebase-node-mysql/blob/main/public/images/tables.png?raw=true)
 
 
-Both endpoints return a Firebase UserCredential (https://firebase.google.com/docs/reference/js/firebase.auth#usercredential)
+Both endpoint return a Firebase UserCredential (https://firebase.google.com/docs/reference/js/firebase.auth#usercredential)
